@@ -1,0 +1,167 @@
+/* ==================== GENERAL ==================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #4CAF50;
+    padding: 10px 0;
+    border-radius: 0 0 20px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #388E3C;
+    transform: scale(1.1);
+}
+
+/* ==================== CATÁLOGO ==================== */
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #ddd;
+}
+
+.catalogo::-webkit-scrollbar {
+    height: 8px;
+}
+
+.catalogo::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.catalogo::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 10px;
+}
+
+.maquinaria {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 20px;
+    flex: 0 0 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maquinaria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.maquinaria img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #4CAF50;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+p, li {
+    margin: 5px 0;
+}
+
+/* ==================== BOTONES ==================== */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== DETALLES & GALERÍA ==================== */
+.detalles, .galeria {
+    background-color: #f0f0f0;
+    border-top: 3px solid #4CAF50;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 0 0 12px 12px;
+    display: none;
+}
+
+.detalles:not(.oculto), .galeria:not(.oculto) {
+    display: block;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 30px;
+    font-weight: bold;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
