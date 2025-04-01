@@ -1,0 +1,202 @@
+/* ==================== GENERAL ==================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+/* ==================== CATÁLOGO ==================== */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.maquinaria {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maquinaria:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.maquinaria img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #4CAF50;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.maquinaria img:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+p, li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* ==================== BOTONES ==================== */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+/* ==================== DETALLES & GALERÍA ==================== */
+.detalles, .galeria {
+    background-color: #f9f9f9;
+    border-top: 3px solid #4CAF50;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+    display: none;
+}
+
+.detalles:not(.oculto), .galeria:not(.oculto) {
+    display: block;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajustar columnas en móvil */
+        gap: 15px;
+    }
+
+    .maquinaria img {
+        max-height: 200px; /* Ajuste para móviles */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (por debajo de 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    .maquinaria img {
+        max-height: 180px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr; /* Un solo item por fila */
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
